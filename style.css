@@ -6,3 +6,14 @@
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 }
+
+:root {
+	--primary-color: #d2f1e4;
+	--secondary-color: #fbcaef;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
