@@ -6,7 +6,15 @@ let quotes = [
 	'“One day they wll realize they lost a diamond while playing with worthless stones.” —Turcois Ominek',
 	'"You cannot convince people to love you. This is an absolute rule. No one will ever give you love because you want him or her to give it. Real love moves freely in both directions. Do not waste your time on anything else." —Cheryl Strayed',
 	'"This is a good sign, having a broken heart. It means we have tried for something." —Elizabeth Gilbert',
-	'"Do not change yourself, so other people will like you. Be yourself and the right people will like you." -unknown'
+	'"Do not change yourself, so other people will like you. Be yourself and the right people will like you." -unknown',
+	'"Don not cry because it over, smile because it happened." - unknown',
+	'"The saddest thing about betrayal is that its never from your enemy." - unknown',
+	'"Don not give up, the hardest battles are given to the strongest soldiers" -unknown',
+	'"Sometimes good people make bad choices, it does not mean they are bad people. It means they are human." -Kishou Arima',
+	'"Suicide does not take away the pain it just passes it on to someone else" -Kakashi Hatake',
+	'"Stop being a rainbow for someone who is colorblind." - unknown'
+	
+
 ]
 	const quoteDisplay = document.getElementById('quoteDisplay')
 	// pobranie przycisku button poprzez klase .button
