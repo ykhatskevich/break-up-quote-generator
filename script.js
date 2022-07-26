@@ -8,10 +8,38 @@ let quotes = [
 	'"This is a good sign, having a broken heart. It means we have tried for something." —Elizabeth Gilbert',
 	'"Do not change yourself, so other people will like you. Be yourself and the right people will like you." -unknown'
 ]
+	const quoteDisplay = document.getElementById('quoteDisplay')
+	// pobranie przycisku button poprzez klase .button
+	const button = document.querySelector('.button') 
+	
+	//wywołanie funkcji newQuote() po kliknieciu w button
+	button.addEventListener('click', newQuote)
+	
+	console.log(button)
+	// let randomNumber = Math.floor(Math.random() * quotes.length)
 
-// let randomNumber = Math.floor(Math.random() * quotes.length)
+function newQuote(e) {
+	// dodanie do diva quote display klasy smoothie
+	quoteDisplay.classList.add("smoothie")
+	//po kliknieciu przycisk staje sie niedostepny
+	button.disabled = true
 
-function newQuote() {
-	let randomNumber = Math.floor(Math.random() * quotes.length)
-	document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber]
+	// opoznienie kolejnch krokow o czas zdefiniowany na koncu 2000ms (2sec)
+	setTimeout(() => {
+		// po dwoch sekundach od klikniecia 
+		let randomNumber = Math.floor(Math.random() * quotes.length)
+		quoteDisplay.innerHTML = quotes[randomNumber]
+
+		//usuniecie klasy smoothie dzieki czemu zachowane jest transition css
+		quoteDisplay.classList.remove('smoothie')
+
+		//przycisk staje sie ponownie dostepny
+		button.disabled = false
+
+		//ustawienie przycisku aby byl niedostepny jest po to by uzytkownik 
+		//nie mogl w niego bezmyslnie spamować powodując przy tym przeskoki
+		// w naszej animacji
+	},2000)
+
+
 }
